@@ -1,6 +1,10 @@
+/*!
+ *  sword-cms style
+ * -------------------------- */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding:0;
+  margin:0;
+  font-family:"FontAwesome", Helvetica, Arial, sans-serif;
 }
 
 a {
