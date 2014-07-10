@@ -4,12 +4,8 @@ var passport = require('passport');
 var Account = require('../models/account');
 
 
-router.get('/', function(req, res){
-	if(req.user){
-		res.render('index', {title: 'Sword CMS'});
-	}else{
-		res.redirect('/login');
-	}
+router.get('/', ensureAuthenticated, function(req, res){
+	res.render('index', {title: 'Sword CMS'});
 });
 
 router.get('/register', function(req, res){
@@ -45,3 +41,13 @@ router.get('/logout', function(req, res){
 });
 
 module.exports = router;
+
+
+/* route middleware to ensure user is authenticated */
+function ensureAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }else{
+        res.redirect('/login');
+    }
+}
