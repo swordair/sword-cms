@@ -5,6 +5,10 @@ var Account = require('../models/account');
 
 
 router.get('/', ensureAuthenticated, function(req, res){
+    var urlto = req.flash("urlto");
+    if(urlto){
+        res.redirect(urlto);
+    }    
 	res.render('index', {title: 'Sword CMS'});
 });
 
@@ -28,7 +32,8 @@ router.post('/register', function(req, res){
 });
 
 router.get('/login', function(req, res){
-	res.render('login', {msg:req.flash("error")});
+    var error = req.flash("error");
+	res.render('login', {msg:error});
 });
 
 router.post('/login', passport.authenticate('local',{

@@ -16,6 +16,7 @@ function ensureAuthenticated(req, res, next){
     if(req.isAuthenticated()){
         return next();
     }else{
+        req.flash('urlto', req.path);
         res.redirect('/login');
     }
 }
