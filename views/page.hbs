@@ -1,0 +1,78 @@
+{{!< default}}
+
+	
+<div class="headline">
+	<div class="account-control">
+        <a class="control-item user-acount" href="/user/id"><i class="fa fa-cog"></i><span class="user-name">Settings</span></a>
+        <a class="control-item user-acount" href="/user/id"><i class="fa fa-user"></i><span class="user-name">iifksp</span></a>
+        <a class="control-item sign-out" href="/user/logout"><i class="fa fa-sign-out"></i></a>
+    </div>
+</div>
+
+<div class="wrapper">
+	<div class="side-nav">
+		<ul>
+            <li class=""><a href=""><i class="fa fa-home"></i></a></li>
+			<li><a href=""><i class="fa fa-tachometer"></i></a></li>
+			<li class="current"><a href=""><i class="fa fa-file-text"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-bar-chart-o"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-bookmark"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-code"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-check"></i></a></li>
+		</ul>
+	</div>
+    <div class="side-sub-nav">
+		<ul>
+            <li class="current"><a href="">Page List</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            
+		</ul>
+	</div>
+
+    <style type="text/css">
+        .operation-bar{padding:10px;}
+        .operation-bar .operation-btn{float:left;margin-right:10px;background:#666;color:#fff;padding:5px 8px;text-decoration:none;border-radius:3px;}
+            .operation-bar .operation-add{background:#6abb42;float:right;}
+            .operation-bar .operation-add:hover{background:#61ac3d;}
+            .operation-bar .operation-delete{background:#d94141;}
+            .operation-bar .operation-delete:hover{background:#c93e3e;}
+        .operation-cell{color:#ccc;}    
+    </style>
+    
+    
+	<div class="main">
+        <header class="main-header">
+            <h2 class="main-title">Page &#187; <span>Page List</span></h2>
+		</header>
+		<div class="main-body">
+            
+            <div class="operation-bar clear-fix">
+                <a class="operation-btn operation-add" href="/page/new"><i class="fa fa-plus-square"></i> add new</a>
+                <a class="operation-btn operation-delete" href="/page/delete"><i class="fa fa-trash-o"></i> delele</a>
+            </div>
+            <table>
+                <tr>
+                    <th width="10"><input type="checkbox" name="" id="" /></th>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>Operation</th>
+                </tr>
+                
+                <tr>
+                    <td><input type="checkbox" name="" id="" /></td>
+                    <td>[id]</td>
+                    <td>[title]</td>
+                    <td class="operation-cell">
+                        <a href="/page/url"><i class="fa fa-external-link"></i></a> | 
+                        <a class="operation-btn operation-edit" href="/page/edit"><i class="fa fa-pencil-square-o"></i></a> | 
+                        <a class="operation-btn operation-edit" href="/page/history"><i class="fa fa-history"></i></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+	</div>
+</div>

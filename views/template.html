@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <link rel="stylesheet" href="../public/css/font-awesome.css" />
+    
+    <style type="text/css">
+        /* common */
+        body{margin:0;font-family:tahoma,arial,sans-serif;min-width:480px;color:#444;font-size:14px;}
+        a{text-decoration:none;color:#369;}
+        a{color: #36c;text-decoration:none;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s;}
+        a:hover{color:#036;text-decoration:underline;}
+        table{border-collapse:collapse;border:1px solid #ddd;margin:1.4em 0;font-size:12px;}
+        td{padding:5px 3px;}
+        th{padding:5px 3px;}
+        tr{border:1px solid #e5e5e5;}
+        ul{}
+        li,p,dt,dl{line-height:1.5;}
+        img{border:none;}
+        blockquote {border-left:5px solid #ddd;margin-left:1.5em;padding-left:1.2em;}
+        .clear-fix:after{clear:both;content:"\200B";display:block;height:0;}
+        .clear-fix{zoom:1;}
+        
+        html,body{height:100%;}
+        .wrapper{height:calc(100% - 51px);background:#fff;}
+        .main{height:100%;-moz-box-sizing:border-box;box-sizing:border-box;overflow-y:auto;}
+        
+        .headline{border-bottom:1px solid #42454E;height:50px;background:#2F323A;}
+            .account-control{float:right;color:#989dac;font-size:14px;}
+            .account-control a{color:#989dac;}
+            .user-acount{font-weight:bold;float:left;}
+            .user-name{margin-left:10px;}
+            .sign-out{float:left;}
+            .control-item{padding:0 18px;border-left:1px solid #42454E;line-height:50px;height:50px;border-right:1px solid #202228;border-bottom:1px solid #202228;}
+            .control-item .fa{font-size:28px;vertical-align:middle;}
+            
+        .side-nav{float:left;width:52px;background:#2f323a;height:100%;box-shadow:2px 0 5px #1e2026;position:relative;z-index:2;overflow:hidden;}
+            .side-nav ul{list-style:none;margin:0;padding:0;margin-top:-1px;border-right:1px solid #42454E;height:100%;}
+            .side-nav ul li a{padding:15px 0;display:block;width:50px;font-size:12px;color:#fff;text-align:center;border:1px solid #42454E;border-bottom:1px solid #202228;}
+            .side-nav ul li:last-child a{box-shadow:0 1px 0 #42454E;}
+            .side-nav ul li a .fa{font-size:14px;color:#989dac;}
+            .side-nav ul li.current{background:#64A6FF;padding-left:3px;}
+            .side-nav ul li.current a{position:relative;z-index:2;background:#25282E;text-align:center;width:44px;padding-right:3px;border-right:1px solid #2C2F35;}
+            .side-nav ul li.current a .fa{color:#fff;}
+            .side-nav ul li.current a:hover{background:#25282E;}
+            .side-nav ul li a:hover{background:#414550;}
+
+        .side-sub-nav{float:left;width:149px;height:100%;background:#26292F;position:relative;z-index:1;border-right:1px solid #000;overflow:hidden;}
+            .side-sub-nav ul{list-style:none;padding:0;margin:0;}   
+            .side-sub-nav ul li{position:relative;z-index:1;}
+            .side-sub-nav ul li a{color:#989DAC;padding:5px 10px;display:block;font-size:12px;}
+            .side-sub-nav ul li.current a{background:#15171B;color:#fff;}
+            .side-sub-nav ul li.current a:hover{background:#15171B;}
+            .side-sub-nav ul li a:hover{background:#414550;text-decoration:none;}
+            
+        .status-note{font-size:12px;padding:10px;margin-bottom:16px;background:#eaffdd;border:1px solid #a9c897;color:#497c2c;border-radius:2px;display:block;}
+
+        .main{margin-left:200px;background:#fff;position:relative;}
+            .main h1{padding:0 0 0.5em 0;font-size:20px;margin:0;border-bottom:1px solid #e5e5e5;margin-bottom:-1px;}
+            .main table{width:100%;}
+            .main table td:first-child,
+            .main table th:first-child{padding-left:6px;}
+
+        form.page-info p{padding-left:150px;margin:5px 0;}
+        form.page-info label{margin-left:-150px;float:left;width:140px;text-align:right;padding-right:10px;font-size:12px;font-weight:bold;padding:3px 0}
+        form.page-info input[type=text]{border:1px solid #ccc;line-height:1.2;padding:3px;vertical-align:top;margin:0;width:99%;font-size:12px;}
+        form.page-info textarea{border:1px solid #ccc;margin:0;width:99%;font-size:12px;}
+        
+        .main-header{padding:10px;border-bottom:1px solid #ccc;}
+        .main-header .main-title{font-size:12px;margin:0;font-weight:100;}
+            .main-header .main-title span{font-weight:700;}
+        
+        .main-body{padding:0;}
+        .main-body table{margin:0;}
+        .main-body table th{text-align:left;}
+        .main-body table tr:hover{background:#f4f4f4;}
+    </style>
+</head>
+<body>
+	
+<div class="headline">
+	<div class="account-control">
+        <a class="control-item user-acount" href="/user/id"><i class="fa fa-cog"></i><span class="user-name">Settings</span></a>
+        <a class="control-item user-acount" href="/user/id"><i class="fa fa-user"></i><span class="user-name">iifksp</span></a>
+        <a class="control-item sign-out" href="/user/logout"><i class="fa fa-sign-out"></i></a>
+    </div>
+</div>
+
+<div class="wrapper">
+	<div class="side-nav">
+		<ul>
+            <li class=""><a href=""><i class="fa fa-home"></i></a></li>
+			<li><a href=""><i class="fa fa-tachometer"></i></a></li>
+			<li class="current"><a href=""><i class="fa fa-file-text"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-bar-chart-o"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-bookmark"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-code"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-check"></i></a></li>
+		</ul>
+	</div>
+    <div class="side-sub-nav">
+		<ul>
+            <li class="current"><a href="">Page List</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            <li class=""><a href="">Page edit</a></li>
+            
+		</ul>
+	</div>
+
+    <style type="text/css">
+        .operation-bar{padding:10px;}
+        .operation-bar .operation-btn{float:left;margin-right:10px;background:#666;color:#fff;padding:5px 8px;text-decoration:none;border-radius:3px;}
+            .operation-bar .operation-add{background:#6abb42;float:right;}
+            .operation-bar .operation-add:hover{background:#61ac3d;}
+            .operation-bar .operation-delete{background:#d94141;}
+            .operation-bar .operation-delete:hover{background:#c93e3e;}
+        .operation-cell{color:#ccc;}    
+    </style>
+    
+    
+	<div class="main">
+        <header class="main-header">
+            <h2 class="main-title">Page &#187; <span>Page List</span></h2>
+		</header>
+		<div class="main-body">
+            
+            <div class="operation-bar clear-fix">
+                <a class="operation-btn operation-add" href="/page/new"><i class="fa fa-plus-square"></i> add new</a>
+                <a class="operation-btn operation-delete" href="/page/delete"><i class="fa fa-trash-o"></i> delele</a>
+            </div>
+            <table>
+                <tr>
+                    <th width="10"><input type="checkbox" name="" id="" /></th>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>Operation</th>
+                </tr>
+                
+                <tr>
+                    <td><input type="checkbox" name="" id="" /></td>
+                    <td>{{page_id}}</td>
+                    <td>title</td>
+                    <td class="operation-cell">
+                        <a href="/page/url"><i class="fa fa-external-link"></i></a> | 
+                        <a class="operation-btn operation-edit" href="/page/edit"><i class="fa fa-pencil-square-o"></i></a> | 
+                        <a class="operation-btn operation-edit" href="/page/history"><i class="fa fa-history"></i></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+	</div>
+</div>
+
+</body>
+</html>

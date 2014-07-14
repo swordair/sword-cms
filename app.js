@@ -13,6 +13,7 @@ var LocalStrategy = require('passport-local').Strategy;
 
 
 var routes = require('./routes/index');
+var pages = require('./routes/page');
 var app = express();
 
 
@@ -46,6 +47,8 @@ mongoose.connect('mongodb://localhost/sword_cms');
 
 /* routes */
 app.use('/', routes);
+app.use('/', pages);
+
 
 
 /* catch 404 and forward to error handler */
