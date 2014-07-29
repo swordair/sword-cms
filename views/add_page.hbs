@@ -1,6 +1,9 @@
 {{!< default}}
 
-	
+<script type="text/javascript">
+
+</script>
+
 <div class="headline">
 	<div class="account-control">
         <a class="control-item user-acount" href="/user/id"><i class="fa fa-cog"></i><span class="user-name">Settings</span></a>
@@ -14,41 +17,20 @@
 		<ul>
             <li class=""><a href=""><i class="fa fa-home"></i></a></li>
 			<li><a href=""><i class="fa fa-tachometer"></i></a></li>
-			<li class="current"><a href=""><i class="fa fa-file-text"></i></a></li>
+			<li class="current"><a href="/sword/page"><i class="fa fa-file-text"></i></a></li>
             <li class=""><a href=""><i class="fa fa-bar-chart-o"></i></a></li>
             <li class=""><a href=""><i class="fa fa-bookmark"></i></a></li>
             <li class=""><a href=""><i class="fa fa-code"></i></a></li>
             <li class=""><a href=""><i class="fa fa-check"></i></a></li>
 		</ul>
 	</div>
-    <div class="side-sub-nav">
-		<ul>
-            <li class=""><a href="/sword/page">Page List</a></li>
-            <li class="current"><a href="/sword/page/add">Page add</a></li>
-            <li class=""><a href="">Page edit</a></li>
-            <li class=""><a href="">Page edit</a></li>
-            <li class=""><a href="">Page edit</a></li>
-            <li class=""><a href="">Page edit</a></li>
-            
-		</ul>
-	</div>
-
-    <style type="text/css">
-        .operation-bar{padding:10px;}
-        .operation-bar .operation-btn{float:left;margin-right:10px;background:#666;color:#fff;padding:5px 8px;text-decoration:none;border-radius:3px;}
-            .operation-bar .operation-add{background:#6abb42;float:right;}
-            .operation-bar .operation-add:hover{background:#61ac3d;}
-            .operation-bar .operation-delete{background:#d94141;}
-            .operation-bar .operation-delete:hover{background:#c93e3e;}
-        .operation-cell{color:#ccc;}    
-    </style>
-    
     
 	<div class="main">
         <header class="main-header">
-            <h2 class="main-title">Page &#187; <span>add page</span></h2>
+            <h2 class="main-title"><a href="/sword/page">Page</a> &#187; <span>add page</span></h2>
 		</header>
 		<div class="main-body">
+        
             <form action="/sword/page/add" method="post">
                 <label for="">title:</label><input name="title" type="" />
                 <div>
@@ -57,6 +39,8 @@
                 </div>
                 <input type="submit" value="add" />
             </form>
+            
         </div>
 	</div>
 </div>
+

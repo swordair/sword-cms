@@ -40,7 +40,7 @@ html,body{height:100%;}
     .control-item{padding:0 18px;border-left:1px solid #42454E;line-height:50px;height:50px;border-right:1px solid #202228;border-bottom:1px solid #202228;}
     .control-item .fa{font-size:28px;vertical-align:middle;}
     
-.side-nav{float:left;width:52px;background:#2f323a;height:100%;box-shadow:2px 0 5px #1e2026;position:relative;z-index:2;overflow:hidden;}
+.side-nav{float:left;width:52px;background:#2f323a;height:100%;position:relative;z-index:2;overflow:hidden;}
     .side-nav ul{list-style:none;margin:0;padding:0;margin-top:-1px;border-right:1px solid #42454E;height:100%;}
     .side-nav ul li a{padding:15px 0;display:block;width:50px;font-size:12px;color:#fff;text-align:center;border:1px solid #42454E;border-bottom:1px solid #202228;}
     .side-nav ul li:last-child a{box-shadow:0 1px 0 #42454E;}
@@ -50,18 +50,10 @@ html,body{height:100%;}
     .side-nav ul li.current a .fa{color:#fff;}
     .side-nav ul li.current a:hover{background:#25282E;}
     .side-nav ul li a:hover{background:#414550;}
-
-.side-sub-nav{float:left;width:149px;height:100%;background:#26292F;position:relative;z-index:1;border-right:1px solid #000;overflow:hidden;}
-    .side-sub-nav ul{list-style:none;padding:0;margin:0;}   
-    .side-sub-nav ul li{position:relative;z-index:1;}
-    .side-sub-nav ul li a{color:#989DAC;padding:5px 10px;display:block;font-size:12px;}
-    .side-sub-nav ul li.current a{background:#15171B;color:#fff;}
-    .side-sub-nav ul li.current a:hover{background:#15171B;}
-    .side-sub-nav ul li a:hover{background:#414550;text-decoration:none;}
     
 .status-note{font-size:12px;padding:10px;margin-bottom:16px;background:#eaffdd;border:1px solid #a9c897;color:#497c2c;border-radius:2px;display:block;}
 
-.main{margin-left:200px;background:#fff;position:relative;}
+.main{margin-left:52px;background:#fff;position:relative;}
     .main h1{padding:0 0 0.5em 0;font-size:20px;margin:0;border-bottom:1px solid #e5e5e5;margin-bottom:-1px;}
     .main table{width:100%;}
     .main table td:first-child,
@@ -80,3 +72,12 @@ form.page-info textarea{border:1px solid #ccc;margin:0;width:99%;font-size:12px;
 .main-body table{margin:0;}
 .main-body table th{text-align:left;}
 .main-body table tr:hover{background:#f4f4f4;}
+
+
+.operation-bar{padding:10px;}
+.operation-bar .operation-btn{float:left;margin-right:10px;background:#666;color:#fff;padding:5px 8px;text-decoration:none;border-radius:3px;}
+    .operation-bar .operation-add{background:#6abb42;float:right;}
+    .operation-bar .operation-add:hover{background:#61ac3d;}
+    .operation-bar .operation-delete{background:#d94141;}
+    .operation-bar .operation-delete:hover{background:#c93e3e;}
+.operation-cell{color:#ccc;}
