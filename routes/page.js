@@ -18,7 +18,7 @@ pageRouter.get('/sword/page', ensureAuthenticated, function(req, res) {
 });
 
 pageRouter.get('/sword/page/add', ensureAuthenticated, function(req, res) {
-    res.render('add_page', {title: 'add new page - Sword CMS'});
+    res.render('page_add', {title: 'add new page - Sword CMS'});
 });
 
 pageRouter.post('/sword/page/add', ensureAuthenticated, function(req, res) {
@@ -37,8 +37,26 @@ pageRouter.post('/sword/page/add', ensureAuthenticated, function(req, res) {
 });
 
 pageRouter.get('/sword/page/edit/:id', ensureAuthenticated, function(req, res) {
-    res.render('add_page', {title: 'add new page - Sword CMS'});
+    Page.find({_id: req.params.id}, function(err, docs){
+        if(err){
+            ;// error handle to do
+        }
+        res.render('page_edit', {title: 'edit page - Sword CMS',page:docs[0]});
+    });
 });
+
+pageRouter.post('/sword/page/edit', ensureAuthenticated, function(req, res) {
+    Page.update({_id:req.body.page_id}, {$set: {title: req.body.title, content: req.body.content}}, {upsert: true}, function(err){
+        if(err){
+            ;// error handle to do
+        }
+        res.redirect('/sword/page');
+    })
+});
+
+
+
+
 
 
 module.exports = pageRouter;

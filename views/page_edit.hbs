@@ -1,0 +1,47 @@
+{{!< default}}
+
+<script type="text/javascript">
+
+</script>
+
+<div class="headline">
+	<div class="account-control">
+        <a class="control-item user-acount" href="/user/id"><i class="fa fa-cog"></i><span class="user-name">Settings</span></a>
+        <a class="control-item user-acount" href="/user/id"><i class="fa fa-user"></i><span class="user-name">iifksp</span></a>
+        <a class="control-item sign-out" href="/user/logout"><i class="fa fa-sign-out"></i></a>
+    </div>
+</div>
+
+<div class="wrapper">
+	<div class="side-nav">
+		<ul>
+            <li class=""><a href=""><i class="fa fa-home"></i></a></li>
+			<li><a href=""><i class="fa fa-tachometer"></i></a></li>
+			<li class="current"><a href="/sword/page"><i class="fa fa-file-text"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-bar-chart-o"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-bookmark"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-code"></i></a></li>
+            <li class=""><a href=""><i class="fa fa-check"></i></a></li>
+		</ul>
+	</div>
+    
+	<div class="main">
+        <header class="main-header">
+            <h2 class="main-title"><a href="/sword/page">Page</a> &#187; <span>edit page</span></h2>
+		</header>
+		<div class="main-body">
+        
+            <form action="/sword/page/edit" method="post">
+                <input type="hidden" name="page_id" value="{{page._id}}"/>
+                <label for="">title:</label><input name="title" type="" value="{{page.title}}" />
+                <div>
+                    <label for="">content</label>
+                    <textarea name="content" id="" cols="30" rows="10">{{page.content}}</textarea>
+                </div>
+                <input type="submit" value="update" />
+            </form>
+            
+        </div>
+	</div>
+</div>
+
