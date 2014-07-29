@@ -23,8 +23,8 @@
 	</div>
     <div class="side-sub-nav">
 		<ul>
-            <li class="current"><a href="/sword/page">Page List</a></li>
-            <li class=""><a href="/sword/page/add">Page add</a></li>
+            <li class=""><a href="/sword/page">Page List</a></li>
+            <li class="current"><a href="/sword/page/add">Page add</a></li>
             <li class=""><a href="">Page edit</a></li>
             <li class=""><a href="">Page edit</a></li>
             <li class=""><a href="">Page edit</a></li>
@@ -46,34 +46,17 @@
     
 	<div class="main">
         <header class="main-header">
-            <h2 class="main-title">Page &#187; <span>Page List</span></h2>
+            <h2 class="main-title">Page &#187; <span>add page</span></h2>
 		</header>
 		<div class="main-body">
-            
-            <div class="operation-bar clear-fix">
-                <a class="operation-btn operation-add" href="/sword/page/add"><i class="fa fa-plus-square"></i> add new</a>
-                <a class="operation-btn operation-delete" href="/sword/page/delete"><i class="fa fa-trash-o"></i> delele</a>
-            </div>
-            <table>
-                <tr>
-                    <th width="10"><input type="checkbox" name="" id="" /></th>
-                    <th>id</th>
-                    <th>title</th>
-                    <th>Operation</th>
-                </tr>
-                {{#each pages}}
-                <tr>
-                    <td><input type="checkbox" name="" id="" /></td>
-                    <td>[id]</td>
-                    <td>{{title}}</td>
-                    <td class="operation-cell">
-                        <a href="/page/url"><i class="fa fa-external-link"></i></a> | 
-                        <a class="operation-btn operation-edit" href="/sword/page/edit/{{_id}}"><i class="fa fa-pencil-square-o"></i></a> | 
-                        <a class="operation-btn operation-edit" href="/sword/page/history"><i class="fa fa-history"></i></a>
-                    </td>
-                </tr>
-                {{/each}}
-            </table>
+            <form action="/sword/page/add" method="post">
+                <label for="">title:</label><input name="title" type="" />
+                <div>
+                    <label for="">content</label>
+                    <textarea name="content" id="" cols="30" rows="10"></textarea>
+                </div>
+                <input type="submit" value="add" />
+            </form>
         </div>
 	</div>
 </div>
